@@ -1,0 +1,26 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn{
+  background-color: #f0134d;
+  color: #FFFFFF;
+}
+
+.pad{
+  padding: 8% 5% 5% 5%;
+}
+
+
+
+.ref{
+  width:90px;
+  height:60px;
+  padding-left: 30px;
+}
+
+.maintitle{
+  font-weight: bold;
+  padding-left: 15px;
+  padding-top: 15px;
+}

@@ -1,0 +1,31 @@
+.pad{
+  padding: 0% 5% 5% 1%;
+}
+
+.btn{
+  background-color: #f0134d;
+  color: #FFFFFF;
+}
+
+.ptop{
+  padding-top: 5%
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ta{
+  text-align: center;
+  font-weight: bold;
+}
+
+.bottom-container{
+  background-color: #f0134d;
+  padding: 20px 0 20px;
+}
+
+.ftext{
+  color: #FFFFFF;
+  padding-top: 30px;
+}

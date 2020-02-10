@@ -1,0 +1,22 @@
+.ta{
+  text-align: center;
+  font-weight: bold;
+}
+
+.bottom-container{
+  background-color: #f0134d;
+  padding: 20px 0 20px;
+}
+
+.ftext{
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.padding{
+  padding-bottom: 219px;
+}

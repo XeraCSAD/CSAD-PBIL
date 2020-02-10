@@ -1,0 +1,58 @@
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#menuitem{
+  padding:0px 100px;
+  text-align: center;
+  padding-bottom: 228px;
+}
+
+.cpad{
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.CH{
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.align{
+  padding: 3% 2%;
+}
+
+.maintitle{
+  font-weight: bolder;
+}
+
+.sub{
+  color: #ababab;
+  font-size: 20px;
+}
+
+.container-fluid{
+  padding: 150px 0px 0px 110px;
+}
+
+.ta{
+  text-align: center;
+  font-weight: bold;
+}
+
+.bottom-container{
+  background-color: #f0134d;
+  padding: 20px 0 20px;
+}
+
+.ftext{
+  color: #FFFFFF;
+  padding-top: 30px;
+}
+
+.resize{
+  width: 15%;
+  height: 15%;
+}

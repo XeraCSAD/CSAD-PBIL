@@ -1,0 +1,26 @@
+#map {
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.iframe {
+  /* height: 100%; */
+  /* width:550; */
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #faeded;
+}
+
+h1 {
+  padding: 40px;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #eb291a;
+}

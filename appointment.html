@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="image/favicon-16x16.png">
+<link rel="manifest" href="image/site.webmanifest">
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDNXOAkBoxYNrq4n1YAJa-Pp3ZLpPRdwyo",
+      authDomain: "careconnect2-e4ec6.firebaseapp.com",
+      databaseURL: "https://careconnect2-e4ec6.firebaseio.com",
+      projectId: "careconnect2-e4ec6",
+      storageBucket: "careconnect2-e4ec6.appspot.com",
+      messagingSenderId: "942811725171",
+      appId: "1:942811725171:web:8127bd9ebdf602676ad906",
+      measurementId: "G-80JMBXD3PK"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <link rel="stylesheet" href="css\appointment.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e6223d;">
+    <a class="navbar-brand" href="home.html">CareConnect</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="location.html">Hospitals</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="aboutus.html">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQ</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" onclick="signOut()">Logout</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <div>
+
+
+    <div>
+      <div class="ptop">
+        <h1 class="toptitle" align="center">Appointment Request</h1>
+        <div class="container-fluid" align="center">
+          <p>Please fill in our online form and we will contact you within 2 working days,
+            with the nearest available appointment slot.</p>
+          <p>This service is strictly for non-emergency, non-urgent cases and not applicable
+            for Same Day Appointment requests.</p>
+          <p>For medical emergency, please call 995.</p>
+        </div>
+      </div>
+      <div class="OptContainer container-fluid">
+        <div class="wishtext">
+          <p>I wish to:</p>
+        </div>
+
+        <select class="form-control col-lg-2">
+          <option></option>
+          <option>Make An Appointment</option>
+          <option>Change An Appointment</option>
+          <option>Cancel An Appointment</option>
+        </select>
+      </div>
+
+
+      <div class="form-group container-fluid">
+        <label for="exampleFormControlTextarea1">Please provide a brief description of your medical condition or symptoms.</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+      </div>
+<br>
+<br>
+<br>
+      <form class="pad">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputName">Full Name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Full Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+        </div>
+        <p>Birthday</p>
+        <div class="form-row">
+          <div class="form-group col-md-2">
+            <label for="inputDay">Day</label>
+            <input type="text" class="form-control" id="inputDay">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputMonth">Month</label>
+            <select id="inputMonth" class="form-control">
+              <option></option>
+              <option>January</option>
+              <option>February</option>
+              <option>March</option>
+              <option>April</option>
+              <option>May</option>
+              <option>June</option>
+              <option>July</option>
+              <option>August</option>
+              <option>September</option>
+              <option>October</option>
+              <option>November</option>
+              <option>December</option>
+            </select>
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputYear">Year</label>
+            <input type="text" class="form-control" id="inputYear">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <div>
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%235ef7e5&amp;ctz=Asia%2FSingapore&amp;src=NWk0aGpuM2g2N2ZkMGZuMmw4cGI3ZDd0dG9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4uc2luZ2Fwb3JlI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23E67C73&amp;color=%230B8043&amp;title=Tester"
+          class="calendar" style="border:solid 1px #777" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bottom-container">
+    <p class="ftext ta">Done by Minyi, Lloyd, and Zhiyang</p>
+  </div>
+
+  <script src="js\signOut.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/js/mdb.min.js"></script>
+</body>
+
+</html>
